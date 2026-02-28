@@ -4,4 +4,4 @@ resources:
 images:
   - name: localhost:5001/demo-app
     newName: localhost:5001/demo-app
-    newTag: latest # IDP Backend 逻辑将修改此处的 Tag
+    newTag: "v-1772267285323"
