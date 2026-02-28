@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: localhost:5001/demo-app:latest # 这个 Tag 会被 IDP Backend 自动修改
+        image: localhost:5001/demo-app:v1
+        imagePullPolicy: Never
         ports:
         - containerPort: 80
 ---
