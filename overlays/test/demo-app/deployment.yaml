@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: main
-        image: localhost:5001/demo-app:v-ptz0in
+        image: localhost:5001/demo-app:v-iami3p
         ports:
         - containerPort: 80
