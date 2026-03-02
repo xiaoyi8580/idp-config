@@ -5,7 +5,7 @@ metadata:
   labels:
     app: demo-app
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: demo-app
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: localhost:5001/demo-app:v-w7ato
+        image: localhost:5001/demo-app:v-bklrd
         ports:
         - containerPort: 80
         env:
