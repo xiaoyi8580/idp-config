@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: localhost:5001/demo-app:v-lut00p
+        image: localhost:5001/demo-app:v-z130jp
         ports:
         - containerPort: 80
         env:
@@ -29,3 +29,26 @@ spec:
           limits:
             cpu: "500m"
             memory: "512Mi"
+        volumeMounts:
+        - name: data
+          mountPath: "/data"
+        livenessProbe:
+          httpGet:
+            path: "/actuator/health"
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: "/actuator/health"
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/bin/bash", "-c", "sleep 0"]
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: demo-app-pvc
