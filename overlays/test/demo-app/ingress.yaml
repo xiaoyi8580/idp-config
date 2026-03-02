@@ -10,7 +10,7 @@ spec:
   - host: localhost
     http:
       paths:
-      - path: /demo-app
+      - path: /demo-app123
         pathType: Prefix
         backend:
           service:
