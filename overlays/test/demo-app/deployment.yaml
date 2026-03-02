@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: localhost:5001/demo-app:v-z130jp
+        image: localhost:5001/demo-app:v-2idmh
         ports:
         - containerPort: 80
         env:
