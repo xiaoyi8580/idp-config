@@ -4,4 +4,4 @@ resources:
 images:
   - name: localhost:5001/demo-app
     newName: localhost:5001/demo-app
-    newTag: "v-pls73"
+    newTag: "v-tq8j7r"
