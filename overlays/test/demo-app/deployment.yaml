@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: localhost:5001/demo-app:v-2idmh
+        image: localhost:5001/demo-app:v-42yezs
         ports:
         - containerPort: 80
         env:
@@ -32,18 +32,7 @@ spec:
         volumeMounts:
         - name: data
           mountPath: "/data"
-        livenessProbe:
-          httpGet:
-            path: "/actuator/health"
-            port: 8080
-          initialDelaySeconds: 60
-          periodSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: "/actuator/health"
-            port: 8080
-          initialDelaySeconds: 30
-          periodSeconds: 10
+
         lifecycle:
           preStop:
             exec:
