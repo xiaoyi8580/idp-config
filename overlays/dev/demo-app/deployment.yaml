@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: kind-registry:5000/demo-app:v-ewr00h
+        image: localhost:5001/demo-app:v-xo5k8
         ports:
         - containerPort: 80
         env:
